@@ -1,0 +1,37 @@
+body{
+    background-color: aquamarine;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: 'Inter';
+}
+p{
+    color: blueviolet;
+}
+a:link{
+
+    text-decoration: none;
+
+    color: midnightblue;
+
+}
+
+a:visited{
+
+    text-decoration: none;
+
+    color: midnightblue;
+
+}
+
+a:hover{
+
+    text-decoration: none;
+
+    color: hotpink;
+
+    font-weight: bold;
+
+}
+.formatheader{
+    font-size: larger;
+}
