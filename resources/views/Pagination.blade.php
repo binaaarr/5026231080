@@ -12,6 +12,19 @@
             font-size: 22px;
         }
         .pagination a.active {
+
+        ul.a{
+            list-style-type: disc;
+            list-style-position: outside;
+            margin: 35;
+            padding: 20;
+            background: blue;
+        }
+        ol.b{
+            list-style-type: decimal;
+            list-style-position: inside;
+        }
+
   background-color: #4CAF50;
   color: white;
 }
@@ -35,6 +48,20 @@
 </head>
 <body>
 
+<p>Menu Berbuka Puasa</p>
+<ul class="a">
+    <li>Ayam Bakar</li>
+    <li>Udang Saus Padang</li>
+    <li>Beef Teriyaki</li>
+</ul>
+
+<p>Urutan Pemenang Lomba Lari</p>
+<ol class="b">
+    <li>Anya</li>
+    <li>Nobita</li>
+    <li>Mail</li>
+</ol>
+
 <h2>Pagination</h2>
 
 <div class="center">
@@ -49,6 +76,7 @@
   <a href="#" class="last-child">&raquo;</a>
 </div>
 </div>
+
 
 </body>
 

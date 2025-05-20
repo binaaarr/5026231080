@@ -19,14 +19,35 @@ Route::get('/', function () {
 });
 
 
-Route::get('halo', function () {
-	return "<h1>Halo, Selamat datang di tutorial laravel www.malasngoding.com</h2>";
+Route::get('KumpulanTugas', function () {
+	return view('frontend');
 });
 
 
-
-Route::get('blog', function () {
-	return view('blog');
+Route::get('Tugas1', function () {
+	return view('pertama');
 });
 
-Route::get('hello', [Link::class, 'helloworld'] );
+Route::get('Tugas2', function () {
+	return view('Pagination');
+});
+
+Route::get('Tugas3', function () {
+	return view('Layout 19 March');
+});
+
+Route::get('Tugas4', function () {
+	return view('js1');
+});
+
+Route::get('Tugas5', function () {
+	return view('js2');
+});
+
+Route::get('Tugas6', function () {
+	return view('KucingdanSup');
+});
+
+Route::get('ETS', function () {
+	return redirect()->away('https://binaaarr.github.io/');
+});
