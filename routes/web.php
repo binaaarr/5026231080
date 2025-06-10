@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
-use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\ObatController;
+use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,12 +59,32 @@ Route::get('ETS', function () {
 
 
 Route::get('dosen', [Link::class, 'index']);
-Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
 
-Route::get('/formulir', [PegawaiController::class, 'formulir']);
-Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+// Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
+
+Route::get('/formulir', [Pegawai2Controller::class, 'formulir']);
+Route::post('/formulir/proses', [Pegawai2Controller::class, 'proses']);
 
 //Route Blog
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+//Crud Pegawai
+Route::get('pegawai', [PegawaiController::class, 'index']);
+Route::get('pegawai/tambah', [PegawaiController::class, 'tambah']);
+Route::get('pegawai/store', [PegawaiController::class, 'store']);
+Route::get('pegawai/edit', [PegawaiController::class, 'edit']);
+Route::get('pegawai/update', [PegawaiController::class, 'update']);
+Route::get('pegawai/hapus', [PegawaiController::class, 'hapus']);
+Route::get('pegawai/cari', [PegawaiController::class, 'cari']);
+
+//Crud Obat
+Route::get('obat', [ObatController::class, 'indexobat']);
+Route::get('obat/tambah', [ObatController::class, 'tambahobat']);
+Route::get('obat/store', [ObatController::class, 'store']);
+Route::get('obat/edit', [ObatController::class, 'edit']);
+Route::get('obat/update', [ObatController::class, 'update']);
+Route::get('obat/hapus', [ObatController::class, 'hapus']);
+Route::get('obat/cari', [ObatController::class, 'cari']);
+

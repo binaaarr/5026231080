@@ -60,6 +60,8 @@ return [
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                PDO::ATTR_TIMEOUT => 5, // Fail if connection takes longer than 5 seconds
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Optional: better error handling
             ]) : [],
         ],
 
