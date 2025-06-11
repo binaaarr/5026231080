@@ -16,7 +16,7 @@
                 Merk
             </div>
             <div class="col-8">
-                <input type="text" name="Merk" required="required" class="form-control">
+                <input type="text" name="merkobat" required="required" class="form-control">
             </div>
         </div>
 
@@ -25,7 +25,7 @@
                 Harga
             </div>
             <div class="col-8">
-                <input type="text" name="Harga" required="required" class="form-control">
+                <input type="text" name="hargaobat" required="required" class="form-control">
             </div>
         </div>
 
@@ -34,7 +34,7 @@
                 Tersedia
             </div>
             <div class="col-8">
-                <input type="text" name="Tersedia" required="required" class="form-control">
+                <input type="text" name="tersedia" required="required" class="form-control">
             </div>
         </div>
 
@@ -43,7 +43,7 @@
                 Berat
             </div>
             <div class="col-8">
-                <textarea type="text" name="Berat" required="required" class="form-control">
+                <textarea type="text" name="berat" required="required" class="form-control">
                 </textarea>
             </div>
         </div>

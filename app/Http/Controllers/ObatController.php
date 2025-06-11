@@ -39,10 +39,10 @@ class ObatController extends Controller
 	{
 		// insert data ke table obat
 		DB::table('obat')->insert([
-			'merkobat' => $request->Merk,
-			'hargaobat' => $request->Harga,
-			'tersedia' => $request->Tersedia,
-			'berat' => $request->Berat
+			'merkobat' => $request->merkobat,
+			'hargaobat' => $request->hargaobat,
+			'tersedia' => $request->tersedia,
+			'berat' => $request->berat
 		]);
 		// alihkan halaman ke halaman obat
 		return redirect('/obat');
@@ -65,10 +65,10 @@ class ObatController extends Controller
 	{
 		// update data obat
 		DB::table('obat')->where('ID',$request->id)->update([
-			'merkobat' => $request->Merk,
-			'hargaobat' => $request->Harga,
-			'tersedia' => $request->Tersedia,
-			'berat' => $request->Berat
+			'merkobat' => $request->merkobat,
+			'hargaobat' => $request->hargaobat,
+			'tersedia' => $request->tersedia,
+			'berat' => $request->berat
 		]);
 		// alihkan halaman ke halaman obat
 		return redirect('/obat');

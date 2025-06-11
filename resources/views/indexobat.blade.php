@@ -6,7 +6,7 @@
 	<a href="/obat/tambah" class="btn btn-primary"> + Tambah Obat Baru</a>
 
 	<p>Cari Data Obat :</p>
-	<form action="/Obat/cari" method="GET">
+	<form action="/obat/cari" method="GET">
 		<input type="text" class="form-control" name="cari" placeholder="Cari Obat .." value="{{@cari}}">
 		<input type="submit" class="btn btn-in" value="CARI">
 	</form>

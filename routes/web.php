@@ -6,6 +6,7 @@ use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\KeranjangController;
 use Illuminate\Support\Facades\Log;
 
 /*
@@ -88,3 +89,8 @@ Route::get('obat/update', [ObatController::class, 'update']);
 Route::get('obat/hapus', [ObatController::class, 'hapus']);
 Route::get('obat/cari', [ObatController::class, 'cari']);
 
+//Crud Keranjang Belanja
+Route::get('keranjang', [KeranjangController::class, 'indexkeranjang']);
+Route::get('keranjang/tambah', [KeranjangController::class, 'tambahbarang']);
+Route::get('keranjang/store', [KeranjangController::class, 'store']);
+Route::get('keranjang/hapus', [KeranjangController::class, 'hapus']);
