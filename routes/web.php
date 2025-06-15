@@ -94,3 +94,12 @@ Route::get('keranjang', [KeranjangController::class, 'indexkeranjang']);
 Route::get('keranjang/tambah', [KeranjangController::class, 'tambahbarang']);
 Route::get('keranjang/store', [KeranjangController::class, 'store']);
 Route::get('keranjang/hapus', [KeranjangController::class, 'hapus']);
+
+//Crud Karyawan
+Route::get('/karyawan', [KaryawanController::class, 'indexkaryawan']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambahkaryawan']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
