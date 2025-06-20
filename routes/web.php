@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\MyKaryawanController;
 use Illuminate\Support\Facades\Log;
 
 /*
@@ -104,3 +105,10 @@ Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
 Route::post('/karyawan/update', [KaryawanController::class, 'update']);
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+
+// Route EAS
+Route::get('/eas', [MyKaryawanController::class, 'indexeas']);
+Route::post('/eas/store', [MyKaryawanController::class, 'store']);
+Route::post('/eas/update', [MyKaryawanController::class, 'update']);
+Route::get('/eas/edit/{kodepegawai}', [MyKaryawanController::class, 'editeas']);
+Route::get('/eas/view/{kodepegawai}', [MyKaryawanController::class, 'view']);
