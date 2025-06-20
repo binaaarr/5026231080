@@ -19,23 +19,23 @@
 		@php
 		@endphp
 		@foreach($keranjangbelanja as $k)
-		@php
-			$Total = $k->Jumlah * $k->Harga;
-		@endphp
+            @php
+                $Total = $k->jumlah * $k->harga;
+            @endphp
 		<tr>
-			<td>{{ $b->ID }}</td>
-			<td>{{ $b->KodeBarang }}</td>
-			<td>{{ $b->Jumlah }}</td>
-			<td>Rp {{ number_format($k->Harga, 0, ',', '.') }}</td>
+			<td>{{ $k->id }}</td>
+			<td>{{ $k->kodebarang }}</td>
+			<td>{{ $k->jumlah }}</td>
+			<td>Rp {{ number_format($k->harga, 0, ',', '.') }}</td>
 			<td>Rp {{ number_format($Total, 0, ',', '.') }}</td>
 			<td>
-				<a href="/keranjang/delete/{{ $p->ID }}" class="btn btn-danger">Batal</a>
+				<a href="/keranjang/hapus/{{ $k->id }}" class="btn btn-danger">Batal</a>
 			</td>
 		</tr>
 		@endforeach
 
 	</table>
     {{
-    $keranjang->links()
+    $keranjangbelanja->links()
     }}
 @endsection

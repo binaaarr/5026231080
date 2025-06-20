@@ -51,7 +51,4 @@
 		<input type="submit" value="Simpan Data" class="btn btn-success">
 	</form>
 
-
-
-</body>
-</html>
+@endsection

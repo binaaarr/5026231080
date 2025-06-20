@@ -5,10 +5,10 @@
 
 	<a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
 
-	<p>Cari Data Pegawai :</p>
+    <p>Cari Data Pegawai :</p>
 	<form action="/pegawai/cari" method="GET">
-		<input type="text" class="form-control" name="cari" placeholder="Cari Pegawai .." value="{{@cari}}">
-		<input type="submit" class="btn btn-in" value="CARI">
+		<input type="text" class="form-control" name="cari" placeholder="Cari Pegawai ..">
+		<input type="submit" class="btn btn-info" value="CARI">
 	</form>
 
 	<br/>

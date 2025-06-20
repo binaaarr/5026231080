@@ -53,7 +53,7 @@ class ObatController extends Controller
 	public function edit($id)
 	{
 		// mengambil data obat berdasarkan id yang dipilih
-		$obat = DB::table('obat')->where('ID',$id)->get();
+		$obat = DB::table('obat')->where('id',$id)->get();
 
 		// passing data obat yang didapat ke view edit.blade.php
 		return view('edit',['obat' => $obat]);
@@ -64,7 +64,7 @@ class ObatController extends Controller
 	public function update(Request $request)
 	{
 		// update data obat
-		DB::table('obat')->where('ID',$request->id)->update([
+		DB::table('obat')->where('id',$request->id)->update([
 			'merkobat' => $request->merkobat,
 			'hargaobat' => $request->hargaobat,
 			'tersedia' => $request->tersedia,
@@ -85,17 +85,16 @@ class ObatController extends Controller
 	}
 
     public function cari(Request $request)
-	{
-		// menangkap data pencarian
-		$cari = $request->cari;
+    {
+        // Menangkap data pencarian
+        $cari = $request->cari;
 
-    		// mengambil data dari table obat sesuai pencarian data
-		$obat = DB::table('obat')
-		->where('merkobat','like',"%".$cari."%")
-		->paginate();
+        // Query: cari data bolpen yang merk-nya sesuai input
+        $bolpen = DB::table('obat')
+            ->where('merkobat', 'like', '%' . $cari . '%')
+            ->paginate();
 
-    		// mengirim data obat ke view index obat
-		return view('indexobat',['obat' => $obat, 'cari' => $cari]);
-
-	}
+        // Kirim ke view dengan hasil pencarian
+        return view('indexobat', ['obat' => $bolpen, 'cari' => $cari]);
+    }
 }

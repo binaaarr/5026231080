@@ -12,14 +12,14 @@
 			<th>Departemen</th>
             <th>Hapus</th>
 		</tr>
-		@foreach($karyawan as $k)
+		@foreach($karyawan as $r)
 		<tr>
-            <td class="text-uppercase">{{ $k->kodepegawai }}</td>
-			<td class="text-uppercase">{{ $k->namalengkap }}</td>
-			<td>{{ $k->divisi }}</td>
-			<td class="text-lowercase">{{ $k->departemen }}</td>
+            <td class="text-uppercase">{{ $r->kodepegawai }}</td>
+			<td class="text-uppercase">{{ $r->namalengkap }}</td>
+			<td>{{ $r->divisi }}</td>
+			<td class="text-lowercase">{{ $r->departemen }}</td>
 			<td>
-				<a href="/karyawan/hapus/{{ $k->kodepegawai }}" class="btn btn-danger">Hapus</a>
+				<a href="/karyawan/hapus/{{ $r->kodepegawai }}" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

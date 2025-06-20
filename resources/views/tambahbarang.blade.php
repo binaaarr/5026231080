@@ -1,7 +1,6 @@
 @extends('template')
 
 @section('content')
-
 	<h3>Keranjang Belanja</h3>
 
 	<a href="/keranjang" class="btn btn-info"> Kembali</a>
@@ -40,6 +39,4 @@
 
 		<button type="submit"  class="btn btn-success">Tambah</button>
 	</form>
-
-</body>
-</html>
+@endsection

@@ -39,10 +39,10 @@ class KeranjangController extends Controller
 	{
 		// insert data ke table keranjangbelanja
 		DB::table('keranjangbelanja')->insert([
-			'ID' => $request->ID,
-			'KodeBarang' => $request->KodeBarang,
-			'Jumlah' => $request->Jumlah,
-			'Harga' => $request->Harga
+			'id' => $request->ID,
+			'kodebarang' => $request->KodeBarang,
+			'jumlah' => $request->Jumlah,
+			'harga' => $request->Harga
 		]);
 		// alihkan halaman ke halaman keranjangbelanja
 		return redirect('/keranjang');
@@ -53,7 +53,7 @@ class KeranjangController extends Controller
 	public function edit($id)
 	{
 		// mengambil data keranjangbelanja berdasarkan id yang dipilih
-		$keranjang = DB::table('keranjangbelanja')->where('ID',$id)->get();
+		$keranjang = DB::table('keranjangbelanja')->where('id',$id)->get();
 
 		// passing data keranjangbelanja yang didapat ke view edit.blade.php
 		return view('edit',['keranjangbelanja' => $keranjang]);
@@ -78,7 +78,7 @@ class KeranjangController extends Controller
 	public function hapus($id)
 	{
 		// menghapus data keranjangbelanja berdasarkan id yang dipilih
-		DB::table('keranjangbelanja')->where('ID',$id)->delete();
+		DB::table('keranjangbelanja')->where('id',$id)->delete();
 
 		// alihkan halaman ke halaman keranjangbelanja
 		return redirect('/keranjang');

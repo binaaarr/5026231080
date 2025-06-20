@@ -27,25 +27,25 @@
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a>
+                <a class="nav-link" href="/frontend">All Front End</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pegawai">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/obat">Tugas CRUD</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 1</a>
+                <a class="nav-link" href="/keranjang">Latihan 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
+                <a class="nav-link" href="/karyawan">Latihan 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
+                <a class="nav-link" href="/karyawan">Latihan 3</a>
             </li>
         </ul>
     </nav>

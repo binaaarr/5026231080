@@ -6,10 +6,14 @@
 	<a href="/obat/tambah" class="btn btn-primary"> + Tambah Obat Baru</a>
 
 	<p>Cari Data Obat :</p>
-	<form action="/obat/cari" method="GET">
-		<input type="text" class="form-control" name="cari" placeholder="Cari Obat .." value="{{@cari}}">
-		<input type="submit" class="btn btn-in" value="CARI">
-	</form>
+	<form action="obat/cari" method="GET">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control " name="cariObat" placeholder="Cari Obat...">
+            <div class="input-group-append">
+                <button class="btn btn-info" type="submit">Cari</button>
+            </div>
+        </div>
+    </form>
 
 	<br/>
 
@@ -28,8 +32,8 @@
 			<td>{{ $b->tersedia }}</td>
 			<td>{{ $b->berat }}</td>
 			<td>
-				<a href="/obat/edit/{{ $p->ID }}" class="btn btn-success">Edit</a>
-				<a href="/obat/hapus/{{ $p->ID }}" class="btn btn-danger">Hapus</a>
+				<a href="/obat/edit/{{ $b->id }}" class="btn btn-success">Edit</a>
+				<a href="/obat/hapus/{{ $b->id }}" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

@@ -16,7 +16,7 @@ class PegawaiController extends Controller
     	// mengirim data pegawai ke view index
 
         try {
-             $pegawai = DB::table('pegawai')->paginate(10);
+            $pegawai = DB::table('pegawai')->paginate(10);
         } catch (\Exception $e) {
             logger()->error('DB error: ' . $e->getMessage());
             throw $e;
@@ -37,42 +37,39 @@ class PegawaiController extends Controller
 	// method untuk insert data ke table pegawai
 	public function store(Request $request)
 	{
-		// insert data ke table pegawai
-		DB::table('pegawai')->insert([
-			'pegawai_nama' => $request->nama,
-			'pegawai_jabatan' => $request->jabatan,
-			'pegawai_umur' => $request->umur,
-			'pegawai_alamat' => $request->alamat
-		]);
-		// alihkan halaman ke halaman pegawai
-		return redirect('/pegawai');
+        DB::table('pegawai')->insert([
+            'pegawai_nama' => $request->nama,
+            'pegawai_jabatan' => $request->jabatan,
+            'pegawai_umur' => $request->umur,
+            'pegawai_alamat' => $request->alamat
+        ]);
 
-	}
+		return redirect('/pegawai');
+    }
 
 	// method untuk edit data pegawai
 	public function edit($id)
 	{
 		// mengambil data pegawai berdasarkan id yang dipilih
-		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+		$pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
 
-		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('edit',['pegawai' => $pegawai]);
-
+		// passing data pegawai yang didapat ke view edit
+		return view('edit', ['pegawai' => $pegawai]);
 	}
 
 	// update data pegawai
 	public function update(Request $request)
 	{
-		// update data pegawai
-		DB::table('pegawai')->where('pegawai_id',$request->id)->update([
+
+		DB::table('pegawai')->where('pegawai_id', $request->id)->update([
 			'pegawai_nama' => $request->nama,
 			'pegawai_jabatan' => $request->jabatan,
 			'pegawai_umur' => $request->umur,
 			'pegawai_alamat' => $request->alamat
 		]);
-		// alihkan halaman ke halaman pegawai
-		return redirect('/pegawai');
-	}
+
+        return redirect('/pegawai');
+    }
 
 	// method untuk hapus data pegawai
 	public function hapus($id)
