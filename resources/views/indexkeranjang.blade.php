@@ -5,6 +5,7 @@
 
 	<a href="/keranjang/tambah" class="btn btn-primary"> + Beli</a>
 
+    <br/>
 	<br/>
 
 	<table class="table table-stripped">

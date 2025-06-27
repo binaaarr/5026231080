@@ -85,16 +85,16 @@ Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 //Crud Obat
 Route::get('obat', [ObatController::class, 'indexobat']);
 Route::get('obat/tambah', [ObatController::class, 'tambahobat']);
-Route::get('obat/store', [ObatController::class, 'store']);
-Route::get('obat/edit/{id}', [ObatController::class, 'edit']);
-Route::get('obat/update', [ObatController::class, 'update']);
+Route::post('obat/store', [ObatController::class, 'store']);
+Route::get('obat/edit/{id}', [ObatController::class, 'editobat']);
+Route::post('obat/update', [ObatController::class, 'updateobat']);
 Route::get('obat/hapus/{id}', [ObatController::class, 'hapus']);
 Route::get('obat/cari', [ObatController::class, 'cari']);
 
 //Crud Keranjang Belanja
 Route::get('keranjang', [KeranjangController::class, 'indexkeranjang']);
 Route::get('keranjang/tambah', [KeranjangController::class, 'tambahbarang']);
-Route::get('keranjang/store', [KeranjangController::class, 'store']);
+Route::post('keranjang/store', [KeranjangController::class, 'store']);
 Route::get('keranjang/hapus/{id}', [KeranjangController::class, 'hapus']);
 
 // Route karyawan

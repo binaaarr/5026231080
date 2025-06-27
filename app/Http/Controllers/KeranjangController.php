@@ -39,10 +39,10 @@ class KeranjangController extends Controller
 	{
 		// insert data ke table keranjangbelanja
 		DB::table('keranjangbelanja')->insert([
-			'id' => $request->ID,
-			'kodebarang' => $request->KodeBarang,
-			'jumlah' => $request->Jumlah,
-			'harga' => $request->Harga
+			'id' => $request->id,
+			'kodebarang' => $request->kodebarang,
+			'jumlah' => $request->jumlah,
+			'harga' => $request->harga
 		]);
 		// alihkan halaman ke halaman keranjangbelanja
 		return redirect('/keranjang');
@@ -65,10 +65,10 @@ class KeranjangController extends Controller
 	{
 		// update data keranjangbelanja
 		DB::table('keranjangbelanja')->where('ID',$request->id)->update([
-			'ID' => $request->ID,
-			'KodeBarang' => $request->KodeBarang,
-			'Jumlah' => $request->Jumlah,
-			'Harga' => $request->Harga
+			'id' => $request->id,
+			'kodebarang' => $request->kodebarang,
+			'jumlah' => $request->jumlah,
+			'harga' => $request->harga
 		]);
 		// alihkan halaman ke halaman keranjangbelanja
 		return redirect('/keranjang');

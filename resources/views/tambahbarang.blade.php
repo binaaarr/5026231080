@@ -12,10 +12,19 @@
 		{{ csrf_field() }}
         <div class="row">
             <div class="col-3">
+                Kode Pembelian
+            </div>
+            <div class="col-8">
+                <input type="text" name="id" required="required" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
                 Kode Barang
             </div>
             <div class="col-8">
-                <input type="text" name="KodeBarang" required="required" class="form-control">
+                <input type="text" name="kodebarang" required="required" class="form-control">
             </div>
         </div>
 
@@ -24,7 +33,7 @@
                 Jumlah
             </div>
             <div class="col-8">
-                <input type="text" name="Jumlah" required="required" class="form-control">
+                <input type="text" name="jumlah" required="required" class="form-control">
             </div>
         </div>
 
@@ -33,7 +42,7 @@
                 Harga
             </div>
             <div class="col-8">
-                <input type="text" name="Harga" required="required" class="form-control">
+                <input type="text" name="harga" required="required" class="form-control">
             </div>
         </div>
 

@@ -2,10 +2,15 @@
 
 @section('content')
 	<h3>Data Obat</h3>
+    <br/>
 
 	<a href="/obat/tambah" class="btn btn-primary"> + Tambah Obat Baru</a>
 
-	<p>Cari Data Obat :</p>
+    <br/>
+    <br/>
+	<h6>Cari Data Obat :</h6>
+
+
 	<form action="obat/cari" method="GET">
         <div class="input-group mb-3">
             <input type="text" class="form-control " name="cariObat" placeholder="Cari Obat...">
